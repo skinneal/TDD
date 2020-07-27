@@ -21,7 +21,12 @@ class TestCase(unittest.TestCase):
     # 21 characters > 20
     def test_3(self):
         pwd = 'VeryL0o0Oo0ngpA5$w0rd'
-        self.assertFalse(check_pwd(pwd))   
+        self.assertFalse(check_pwd(pwd))
+
+    # No lowercase letter
+    def test_4(self):
+        pwd = 'PA5$WORD'
+        self.assertFalse(check_pwd(pwd))  
 
 if __name__ == '__main__':
     unittest.main()
