@@ -8,7 +8,7 @@ from check_pwd import check_pwd
 
 class TestCase(unittest.TestCase):
 
-    # 1
+    # Empty String
     def test_1(self):
         pwd = ''
         self.assertFalse(check_pwd(pwd))
