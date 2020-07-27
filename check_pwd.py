@@ -23,5 +23,10 @@ def check_pwd(pwd):
     for char in pwd:
         if char.isnumber():
             return True
+
+    for char in pwd:
+        if char.contains('~','`','!','@','#','$','%','^','&','*','(',')','_','+','-','='):
+            return True
+            
     return True
 
