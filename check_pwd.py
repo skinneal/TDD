@@ -15,5 +15,9 @@ def check_pwd(pwd):
     for char in pwd:
         if char.islower():
             return True
+
+    for char in pwd:
+        if char.isupper():
+            return True
     return True
 
