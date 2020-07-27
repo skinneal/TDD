@@ -26,7 +26,12 @@ class TestCase(unittest.TestCase):
     # No lowercase letter
     def test_4(self):
         pwd = 'PA5$WORD'
-        self.assertFalse(check_pwd(pwd))  
+        self.assertFalse(check_pwd(pwd))
+
+    # No uppercase letter
+    def test_5(self):
+        pwd = 'pa5$word'
+        self.assertFalse(check_pwd(pwd))
 
 if __name__ == '__main__':
     unittest.main()
