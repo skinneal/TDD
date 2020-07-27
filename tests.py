@@ -38,5 +38,11 @@ class TestCase(unittest.TestCase):
         pwd = 'Pas$word'
         self.assertFalse(check_pwd(pwd))
 
+    #No symbol
+    def test_7(self):
+        pwd = 'Pa5sword'
+        self.assertFalse(check_pwd(pwd))
+
+
 if __name__ == '__main__':
     unittest.main()
