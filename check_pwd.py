@@ -12,21 +12,35 @@ def check_pwd(pwd):
     if len(pwd) > 20 :
         return False
 
+    var = 0
     for char in pwd:
         if char.islower():
-            return True
+            var += 1
+    if var == 0:
+        return False
 
+    var = 0
     for char in pwd:
         if char.isupper():
-            return True
+            var += 1
+    if var == 0:
+        return False
 
+    var = 0
     for char in pwd:
-        if char.isnumber():
-            return True
+        if char.isdigit():
+            var += 1
+    if var == 0:
+        return False
 
+    symCount = 0
+    symbols = '~`!@#$%^&*()_+-='
     for char in pwd:
-        if char.contains('~','`','!','@','#','$','%','^','&','*','(',')','_','+','-','='):
-            return True
-            
+        for sym in symbols:
+            if ((char) == sym):
+                symCount += 1
+        if symCount == 0:
+            return False
+
     return True
 
